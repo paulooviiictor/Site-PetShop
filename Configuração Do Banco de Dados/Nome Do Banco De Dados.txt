@@ -1,0 +1,5 @@
+Nome Do Banco de Dados: petshop
+Nome Da Tabela:
+
+		noticias
+		usuarios

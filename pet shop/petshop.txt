@@ -1,0 +1,3 @@
+http://www.petlove.com.br/
+http://blog.thiagobelem.net/sistema-de-busca-em-php-e-mysql/
+http://rafaelcouto.com.br/sistema-de-busca-interna-com-php-mysql/ 

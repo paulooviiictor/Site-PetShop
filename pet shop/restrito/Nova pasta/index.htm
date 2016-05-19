@@ -1,0 +1,548 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0032)file:///F:/pet%20shop/index.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>Pet Shop Story</title>
+<meta name="keywords" content="free template, floral shop, ecommerce, online shopping, store">
+<meta name="description" content="Floral Shop is free website template for ecommerce or online shopping websites. Products, Shopping Cart, FAQs and Checkout pages are included.">
+<link href="templatemo_style.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="css/orman.css" type="text/css" media="screen">
+<link rel="stylesheet" href="css/nivo-slider.css" type="text/css" media="screen">
+
+<link rel="stylesheet" type="text/css" href="css/ddsmoothmenu.css">
+<script type="text/javascript" src="js/logging.js"></script>
+<script type="text/javascript" src="js/AC_RunActiveContent.js"></script>
+<script src="js/jquery142.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/ddsmoothmenu.js">
+
+/***********************************************
+* Smooth Navigational Menu- (c) Dynamic Drive DHTML code library (www.dynamicdrive.com)
+* This notice MUST stay intact for legal use
+* Visit Dynamic Drive at http://www.dynamicdrive.com/ for full source code
+***********************************************/
+
+</script>
+<script src="fjs/scriptModal.js"></script>
+<script type="text/javascript">
+
+ddsmoothmenu.init({
+	mainmenuid: "templatemo_menu", //menu DIV id
+	orientation: 'h', //Horizontal or vertical menu: Set to "h" or "v"
+	classname: 'ddsmoothmenu', //class added to menu's outer DIV
+	//customtheme: ["#1c5a80", "#18374a"],
+	contentsource: "markup" //"markup" or ["container_id", "path_to_menu_file"]
+})
+
+function clearText(field)
+{
+    if (field.defaultValue == field.value) field.value = '';
+    else if (field.value == '') field.value = field.defaultValue;
+}
+
+</script>
+
+<link rel="stylesheet" href="css/slimbox2.css" type="text/css" media="screen"> 
+<script type="text/JavaScript" src="js/slimbox2.js"></script> 
+
+<script type="text/javascript">
+           $(function () {
+               $('#gallery a').lightBox();
+           });
+        </script>
+		<style type="text/css">
+	#gallery {
+		background-color: #fff;
+		padding: 10px;
+		width: auto;
+	}
+	#gallery ul { list-style: none; }
+	#gallery ul li { display: inline; }
+	#gallery ul img {
+		border: 5px solid #444444;
+		border-width: 5px 5px 20px;
+	}
+	#gallery ul a:hover img {
+		border: 5px solid #fff;
+		border-width: 5px 5px 20px;
+		color: #fff;
+	}
+	#gallery ul a:hover { color: #fff; }
+	
+	#slideshow,#slideshow2 {
+	margin:0 auto;
+	width:640px;
+	height:263px;
+	background:transparent url(image/bg_slideshow.png) no-repeat 0 0;
+	position:relative;
+}
+#slideshow #slidesContainer,#slideshow2 #slidesContainer2 {
+  margin:0 auto;
+  width:560px;
+  height:363px;
+  overflow:auto; /* allow scrollbar */
+  position:relative;
+  
+}
+#slideshow #slidesContainer .slide,#slideshow2 #slidesContainer2 .slide2 {
+  margin:0 auto;
+  width:540px; /* reduce by 20 pixels of #slidesContainer to avoid horizontal scroll */
+  height:263px;
+}
+
+/** 
+ * Slideshow controls style rules.
+ */
+.control,.control2 {
+  display:block;
+  width:39px;
+  height:263px;
+  text-indent:-10000px;
+  position:absolute;
+  cursor: pointer;
+}
+#leftControl,#leftControl2 {
+  top:0;
+  left:0;
+  background:transparent url(images/control_left.png) no-repeat 0 0;
+}
+#rightControl,#rightControl2 {
+  top:0;
+  right:0;
+  background:transparent url(images/control_right.png) no-repeat 0 0;
+}
+
+/** 
+ * Style rules for Demo page
+ */
+/** {
+  margin:0;
+  padding:0;
+  font:normal 11px Verdana, Geneva, sans-serif;
+  color:#ccc;
+}
+a {
+  color: #fff;
+  font-weight:bold;
+  text-decoration:none;
+}
+a:hover {
+  text-decoration:underline;
+}
+body {
+  background:#393737 url(img/bg_body.jpg) repeat-x top left;
+}*/
+#pageContainer,#pageContainer2 {
+  margin:0 auto;
+  width:960px;
+
+}
+.slide,.slide2{  position:relative;
+  left:50px;}
+.style1 {color: #FFFFFF}
+/*#pageContainer h1 {
+  display:block;
+  width:960px;
+  height:114px;
+  background:transparent url(img/bg_pagecontainer_h1.jpg) no-repeat top left;
+  text-indent: -10000px;
+}
+.slide h2, .slide p {
+  margin:15px;
+}
+.slide h2 {
+  font:italic 24px Georgia, "Times New Roman", Times, serif;
+  color:#ccc;
+  letter-spacing:-1px;
+}
+.slide img {
+  float:right;
+  margin:0 15px;
+}*/
+-->
+	    </style>
+<script type="text/javascript" src="file:///F:/pet%20shop/js/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+  var currentPosition = 0;
+  var slideWidth = 560;
+  var slides = $('.slide');
+  var numberOfSlides = slides.length;
+
+  // Remove scrollbar in JS
+  $('#slidesContainer').css('overflow', 'hidden');
+
+  // Wrap all .slides with #slideInner div
+  slides
+    .wrapAll('<div id="slideInner"></div>')
+    // Float left to display horizontally, readjust .slides width
+	.css({
+      'float' : 'left',
+      'width' : slideWidth
+    });
+
+  // Set #slideInner width equal to total width of all slides
+  $('#slideInner').css('width', slideWidth * numberOfSlides);
+
+  // Insert controls in the DOM
+  $('#slideshow')
+    .prepend('<span class="control" id="leftControl">Clicking moves left</span>')
+    .append('<span class="control" id="rightControl">Clicking moves right</span>');
+
+  // Hide left arrow control on first load
+  manageControls(currentPosition);
+
+  // Create event listeners for .controls clicks
+  $('.control')
+    .bind('click', function(){
+    // Determine new position
+	currentPosition = ($(this).attr('id')=='rightControl') ? currentPosition+1 : currentPosition-1;
+    
+	// Hide / show controls
+    manageControls(currentPosition);
+    // Move slideInner using margin-left
+    $('#slideInner').animate({
+      'marginLeft' : slideWidth*(-currentPosition)
+    });
+  });
+
+  // manageControls: Hides and Shows controls depending on currentPosition
+  function manageControls(position){
+    // Hide left arrow if position is first slide
+	if(position==0){ $('#leftControl').hide() } else{ $('#leftControl').show() }
+	// Hide right arrow if position is last slide
+    if(position==numberOfSlides-1){ $('#rightControl').hide() } else{ $('#rightControl').show() }
+  }	
+});
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+  var currentPosition2 = 0;
+  var slideWidth2 = 560;
+  var slides2 = $('.slide2');
+  var numberOfSlides2 = slides2.length;
+
+  // Remove scrollbar in JS
+  $('#slidesContainer2').css('overflow', 'hidden');
+
+  // Wrap all .slides with #slideInner div
+  slides2
+    .wrapAll('<div id="slideInner2"></div>')
+    // Float left to display horizontally, readjust .slides width
+	.css({
+      'float' : 'left',
+      'width' : slideWidth2
+    });
+
+  // Set #slideInner width equal to total width of all slides
+  $('#slideInner2').css('width', slideWidth2 * numberOfSlides2);
+
+  // Insert controls in the DOM
+  $('#slideshow2')
+    .prepend('<span class="control2" id="leftControl2">Clicking moves left</span>')
+    .append('<span class="control2" id="rightControl2">Clicking moves right</span>');
+
+  // Hide left arrow control on first load
+  manageControls2(currentPosition2);
+
+  // Create event listeners for .controls clicks
+  $('.control2')
+    .bind('click', function(){
+    // Determine new position
+	currentPosition2 = ($(this).attr('id')=='rightControl2') ? currentPosition2+1 : currentPosition2-1;
+    
+	// Hide / show controls
+    manageControls2(currentPosition2);
+    // Move slideInner using margin-left
+    $('#slideInner2').animate({
+      'marginLeft' : slideWidth2*(-currentPosition2)
+    });
+  });
+
+  // manageControls: Hides and Shows controls depending on currentPosition
+  function manageControls2(position){
+    // Hide left arrow if position is first slide
+	if(position==0){ $('#leftControl2').hide() } else{ $('#leftControl2').show() }
+	// Hide right arrow if position is last slide
+    if(position==numberOfSlides2-1){ $('#rightControl2').hide() } else{ $('#rightControl2').show() }
+  }	
+});
+</script>
+
+</head>
+
+<body>
+<!--     -->
+<div class="windows-popup">
+        <div class="title-popup"><h4><font color="#FFFFFF">Cadastro</font></h4> 
+        <div title="Fechar" class="close-popup"></div></div>
+        <div class="content-popup"></div>
+                   <div id="contact_form">
+           <form method="post" name="contact" action="file:///F:/pet%20shop/index.html#">
+           		<div class="col col13">
+                
+                    <label for="nome">Nome:</label> 
+              		<input name="nome" type="text" class="input_field" id="name" maxlength="40">
+                	<div class="cleaner h10"></div>
+                    <label for="senha">Senha:</label> 
+          			<input name="senha" type="password" class="required input_field" id="email" maxlength="40">
+                	<div class="cleaner h10"></div>
+                
+			 	</div>
+                
+                <div class="col col23 no_margin_right">
+                    <div class="cleaner h10"></div>
+                    <input type="submit" class="submit_btn left" name="submit" id="submit" value="Enviar">
+                    
+				</div>
+                
+                
+          </form>
+		  <blockquote style="height:100px;">    </blockquote>
+
+		  <!--<blockquote style="height:100px; width:200px; position:relative; top:-90px; border-width:2px; border-color:#339900">  </blockquote>-->
+        </div>
+ 
+</div>
+            
+        
+    
+    	
+    <div class="mask-popup" style="position: fixed; left: 0; top: 0; opacity: 0.8; background-image:url(images/fundoModal.png); z-index:999;"></div>	
+
+<!--     -->
+<div id="templatemo_wrapper_h">
+<div id="templatemo_header_wh">
+
+	<div id="templatemo_header" class="header_home"> 
+      <div id="site_title"><a href="file:///F:/pet%20shop/index.html#" rel="nofollow"></a></div>
+      <div id="templatemo_menu" class="ddsmoothmenu"> 
+        <ul>
+          <li><a href="./index_files/index.htm" class="selected">Home</a></li>
+          <li><a href="file:///F:/pet%20shop/products.html">Produtos</a> 
+        <!--    <ul>
+              <li><a href="#" rel="nofollow">Rações</a></li>
+              <li><a href="#" rel="nofollow">Roupas</a></li>
+              <li><a href="#" rel="nofollow">Brinquedos</a></li>
+              <li><a href="#" rel="nofollow">Remédios</a></li>
+              <li><a href="#" rel="nofollow">Banho e tosa</a></li>
+            </ul>-->
+          </li>
+          <li><a href="file:///F:/pet%20shop/checkout.html">Galeria</a></li>
+          <li><a href="file:///F:/pet%20shop/checkout.html">Cadastro</a></li>
+          <li><a href="file:///F:/pet%20shop/contact.html">Contatos</a></li>
+          <li><a href="file:///F:/pet%20shop/faqs.html">Dúvidas</a></li>
+		  <li style="left:150px;"><a href="file:///F:/pet%20shop/index.html#">Login</a></li>
+          <!--<li><a href="about.html">Desenvolvedores</a></li>--->
+        </ul>
+        <div id="templatemo_search"> 
+          <form action="file:///F:/pet%20shop/index.html#" method="get">
+            <input type="text" value="Procurar" name="keyword" id="keyword" title="keyword" onfocus="clearText(this)" onblur="clearText(this)" class="txt_field">
+            <input type="submit" name="Search" value="" alt="Search" id="searchbutton" title="Search" class="sub_btn">
+          </form>
+        </div>
+        <br style="clear: left">
+      </div>
+      <!-- end of templatemo_menu -->
+      <div class="slider-wrapper theme-orman"> 
+        <div class="ribbon"></div>
+        <div id="slider" class="nivoSlider" style="position: relative; background: url(file:///F:/pet%20shop/images/portfolio/05.jpg) no-repeat;"> <img src="file:///F:/pet%20shop/images/portfolio/01.jpg" alt="slider image 1" style="display: none;"> 
+          <img src="file:///F:/pet%20shop/images/portfolio/02.jpg" alt="slider image 2" title="" style="display: none;"> 
+          <img src="file:///F:/pet%20shop/images/portfolio/03.jpg" alt="slider image 3" style="display: none;"> <img src="file:///F:/pet%20shop/images/portfolio/04.jpg" alt="slider image 4" title="" style="display: none;"> 
+          <img src="file:///F:/pet%20shop/images/portfolio/05.jpg" alt="slider image 5" title="" style="display: none;"> 
+        <div class="nivo-caption" style="display: none; opacity: 0.8;"><p></p></div><div class="nivo-directionNav" style="display: none;"><a class="nivo-prevNav">Prev</a><a class="nivo-nextNav">Next</a></div><div class="nivo-slice" style="left: 0px; width: 64px; height: 100%; opacity: 1; top: 0px; background: url(file:///F:/pet%20shop/images/portfolio/01.jpg) 0px 0% no-repeat;"></div><div class="nivo-slice" style="left: 64px; width: 64px; height: 100%; opacity: 1; top: 0px; background: url(file:///F:/pet%20shop/images/portfolio/01.jpg) -64px 0% no-repeat;"></div><div class="nivo-slice" style="left: 128px; width: 64px; height: 100%; opacity: 1; top: 0px; background: url(file:///F:/pet%20shop/images/portfolio/01.jpg) -128px 0% no-repeat;"></div><div class="nivo-slice" style="left: 192px; width: 64px; height: 100%; opacity: 1; top: 0px; background: url(file:///F:/pet%20shop/images/portfolio/01.jpg) -192px 0% no-repeat;"></div><div class="nivo-slice" style="left: 256px; width: 64px; height: 100%; opacity: 1; top: 0px; background: url(file:///F:/pet%20shop/images/portfolio/01.jpg) -256px 0% no-repeat;"></div><div class="nivo-slice" style="left: 320px; width: 64px; height: 100%; opacity: 1; top: 0px; background: url(file:///F:/pet%20shop/images/portfolio/01.jpg) -320px 0% no-repeat;"></div><div class="nivo-slice" style="left: 384px; width: 64px; height: 100%; opacity: 1; top: 0px; background: url(file:///F:/pet%20shop/images/portfolio/01.jpg) -384px 0% no-repeat;"></div><div class="nivo-slice" style="left: 448px; width: 64px; height: 100%; opacity: 1; top: 0px; background: url(file:///F:/pet%20shop/images/portfolio/01.jpg) -448px 0% no-repeat;"></div><div class="nivo-slice" style="left: 512px; width: 64px; height: 100%; opacity: 1; top: 0px; background: url(file:///F:/pet%20shop/images/portfolio/01.jpg) -512px 0% no-repeat;"></div><div class="nivo-slice" style="left: 576px; width: 64px; height: 100%; opacity: 1; top: 0px; background: url(file:///F:/pet%20shop/images/portfolio/01.jpg) -576px 0% no-repeat;"></div><div class="nivo-slice" style="left: 640px; width: 64px; height: 100%; opacity: 1; top: 0px; background: url(file:///F:/pet%20shop/images/portfolio/01.jpg) -640px 0% no-repeat;"></div><div class="nivo-slice" style="left: 704px; width: 64px; height: 100%; opacity: 1; top: 0px; background: url(file:///F:/pet%20shop/images/portfolio/01.jpg) -704px 0% no-repeat;"></div><div class="nivo-slice" style="left: 768px; width: 64px; height: 100%; opacity: 1; top: 0px; background: url(file:///F:/pet%20shop/images/portfolio/01.jpg) -768px 0% no-repeat;"></div><div class="nivo-slice" style="left: 832px; width: 64px; height: 100%; opacity: 1; top: 0px; background: url(file:///F:/pet%20shop/images/portfolio/01.jpg) -832px 0% no-repeat;"></div><div class="nivo-slice" style="left: 896px; width: 64px; height: 100%; opacity: 1; top: 0px; background: url(file:///F:/pet%20shop/images/portfolio/01.jpg) -896px 0% no-repeat;"></div></div>
+        
+      </div>
+      <script type="text/javascript" src="file:///F:/pet%20shop/js/jquery-1.6.1.min.js"></script>
+      <script type="text/javascript" src="file:///F:/pet%20shop/js/jquery.nivo.slider.pack.js"></script>
+      <script type="text/javascript">
+        $(window).load(function() {
+            $('#slider').nivoSlider({
+				controlNav:false
+			});
+        });
+        </script>
+    </div>
+    <!-- END of header -->
+</div> <!-- END of header wrapper -->
+
+<div id="templatemo_main_wrapper">
+<div id="templatemo_main">
+	<div id="sidebar" class="left">
+    	<div class="sidebar_box"><span class="bottom"></span> 
+          <h3>Categorias</h3>
+          <div class="content"> 
+            <ul class="sidebar_list">
+              <li><a href="file:///F:/pet%20shop/index.html#">Gatos</a></li>
+              <li><a href="file:///F:/pet%20shop/index.html#">Cachorros</a></li>
+              <li><a href="file:///F:/pet%20shop/index.html#">Pássaros</a></li>
+              <li><a href="file:///F:/pet%20shop/index.html#">Peixes</a></li>
+              <li><a href="file:///F:/pet%20shop/index.html#">Roedores</a></li>
+              <li><a href="file:///F:/pet%20shop/index.html#">Adoções</a></li>
+              <li><a href="file:///F:/pet%20shop/index.html#">Projeto Resgatando Vidas</a></li>
+              <li><a href="file:///F:/pet%20shop/index.html#">Animais Exóticos</a></li>
+              <li><a href="file:///F:/pet%20shop/faqs.html">Perguntas Mais frequentes</a></li>
+            </ul>
+          </div>
+        </div>
+		
+        <div class="sidebar_box"><span class="bottom"></span> 
+          <h3>Especial da Semana</h3>
+          <div class="content special"> <img src="file:///F:/pet%20shop/images/especial/images%20(1).jpg" alt="Casal de Pombas"> 
+            <a href="file:///F:/pet%20shop/index.html#">Casal de Pombas Rosa</a> 
+            <p> Preço: <span class="price normal_price">R$500</span>&nbsp;&nbsp; 
+              <span class="price special_price">R$300</span> </p>
+          </div>
+        </div>
+    </div>
+    
+    <div id="content" class="right">
+		<h2>Seja Bem-Vindo!</h2>
+		<p> Temos tratamentos e produtos de qualidade para os mais diversos tipos de mascotes. Esperamos sua visita ao nosso estabelecimento que fizemos com o intuito de cuidar dos seus bichinhos. Confira nossas novidades aqui abaixo. Lambeijos!</p>
+        
+
+			<!-- Slideshow HTML -->
+  <div id="slideshow2"><span class="control2" id="leftControl2" style="display: none;">Clicking moves left</span>
+    <div id="slidesContainer2" style="overflow: hidden;">
+<div id="slideInner2" style="width: 1120px;"><div class="slide2" style="float: left; width: 560px;">
+        <div class="product_box">
+            <a href="file:///F:/pet%20shop/productdetail.html"><img src="file:///F:/pet%20shop/images/product/unhaposti%C3%A7aparagatos.jpg" alt="Unha Postiça"></a>
+            <h3><br>Unha Postiça Para Gatos</h3>
+          	<p class="product_price">R$50</p>
+            <p class="add_to_cart">
+                <a href="file:///F:/pet%20shop/productdetail.html">+Detalhes</a>
+                <!--<a href="shoppingcart.html">+Carrinho</a>-->
+            </p>
+        </div>  
+		
+		 <div class="product_box">
+            <a href="file:///F:/pet%20shop/productdetail.html"><img src="file:///F:/pet%20shop/images/product/verm%C3%ADfogodontralparagatos.jpg" alt="Remédio Vermífogo"></a>
+            <h3>Vermífogo Dontral Para Gatos</h3>
+          	<p class="product_price">R$80</p>
+            <p class="add_to_cart">
+                <a href="file:///F:/pet%20shop/productdetail.html">+Detalhes</a>
+                <!--<a href="shoppingcart.html">+Carrinho</a>-->
+            </p>
+        </div>  
+		 	
+		    
+	  </div><div class="slide2" style="float: left; width: 560px;">
+              <div class="product_box">
+            <a href="file:///F:/pet%20shop/productdetail.html"><img src="file:///F:/pet%20shop/images/product/gaiola2.jpg" alt="Hamster"></a>
+      		<h3>Gaiola Hamster em Acrílico Completa</h3>
+            <p class="product_price">R$140</p>
+            <p class="add_to_cart">
+                <a href="file:///F:/pet%20shop/productdetail.html">+Detalhes</a>
+                <!--<a href="shoppingcart.html">+Carrinho</a>-->
+				</p></div>
+		 	<div class="product_box">
+            <a href="file:///F:/pet%20shop/productdetail.html"><img src="file:///F:/pet%20shop/images/product/principe.jpg" alt="Filhotes de Hamster"></a>
+            <h3>Filhotes de Hamster Chinês</h3>
+            <p class="product_price">R$10</p>
+            <p class="add_to_cart">
+                <a href="file:///F:/pet%20shop/productdetail.html">+Detalhes</a>
+                <!--<a href="shoppingcart.html">+Carrinho</a>-->
+            </p>
+        </div>        	
+        <div class="product_box no_margin_right">
+            <a href="file:///F:/pet%20shop/productdetail.html"><img src="file:///F:/pet%20shop/images/product/pedigree.jpg" alt="Ração Para Cães"></a>
+            <h3>Ração Para Cães Pedigree</h3>
+            <p class="product_price">R$80 "PROMOÇÃO"</p>
+            <p class="add_to_cart">
+                <a href="file:///F:/pet%20shop/productdetail.html">+Detalhes</a>
+                <!--<a href="shoppingcart.html">+Carrinho</a>-->
+            </p>
+        </div>
+		    
+	  </div></div>
+	  
+	</div>
+  <span class="control2" id="rightControl2">Clicking moves right</span></div>           <br> <br><br><br>
+			<!-- Slideshow HTML -->
+  <div id="slideshow"><span class="control" id="leftControl" style="display: none;">Clicking moves left</span>
+    <div id="slidesContainer" style="overflow: hidden;">
+	  <div id="slideInner" style="width: 1120px;"><div class="slide" style="float: left; width: 560px;">
+        <div class="product_box">
+            <a href="file:///F:/pet%20shop/productdetail.html"><img src="file:///F:/pet%20shop/images/product/brinquedo2.jpg" alt="Novo Mordedor"></a>
+            <h3><br>Novo Mordedor Para Gatos</h3>
+          	<p class="product_price">R$10</p>
+            <p class="add_to_cart">
+                <a href="file:///F:/pet%20shop/productdetail.html">+Detalhes</a>
+                <!--<a href="shoppingcart.html">+Carrinho</a>-->
+            </p>
+        </div>  
+		
+		 <div class="product_box">
+            <a href="file:///F:/pet%20shop/productdetail.html"><img src="file:///F:/pet%20shop/images/product/aquario1.jpg" alt="Aquário Natureza Selvagem"></a>
+            <h3>Aquário Natureza Selvagem</h3>
+          	<p class="product_price">R$150</p>
+            <p class="add_to_cart">
+                <a href="file:///F:/pet%20shop/productdetail.html">+Detalhes</a>
+                <!--<a href="shoppingcart.html">+Carrinho</a>-->
+            </p>
+        </div>  
+		
+           	
+		    
+	  </div><div class="slide" style="float: left; width: 560px;">
+       <div class="product_box">
+            <a href="file:///F:/pet%20shop/productdetail.html"><img src="file:///F:/pet%20shop/images/product/brinquedo3.jpg" alt="Mordedor Para Cachorro"></a>
+            <h3><br>Novo Mordedor Para Cachorro</h3>
+          <p class="product_price">R$10</p>
+            <p class="add_to_cart">
+                <a href="file:///F:/pet%20shop/productdetail.html">+Detalhes</a>
+                <!--<a href="shoppingcart.html">+Carrinho</a>-->
+            </p>
+        </div>    
+		<div class="product_box no_margin_right">
+            <a href="file:///F:/pet%20shop/productdetail.html"><img src="file:///F:/pet%20shop/images/product/brinquedo1.jpg" alt="Brinquedo Passa-tempo"></a>
+            <h3><br>Brinquedo Passa-tempo</h3>
+            <p class="product_price">R$50</p>
+            <p class="add_to_cart">
+                <a href="file:///F:/pet%20shop/productdetail.html">+Detalhes</a>
+                <!--<a href="shoppingcart.html">+Carrinho</a>-->
+            </p>
+        </div>  
+				 <div class="product_box">
+            <a href="file:///F:/pet%20shop/productdetail.html"><img src="file:///F:/pet%20shop/images/product/racao1.jpg" alt="Ração Para Pássaros"></a>
+            <h3>Ração Para Pássaro Preto, Sabiá e Trinca-ferro</h3>
+            <p class="product_price">R$10</p>
+            <p class="add_to_cart">
+                <a href="file:///F:/pet%20shop/productdetail.html">+Detalhes</a>
+                <!--<a href="shoppingcart.html">+Carrinho</a>-->
+            </p>
+        </div> 
+	  </div></div>
+	  
+	  
+	  
+	  
+	</div>
+  <span class="control" id="rightControl">Clicking moves right</span></div>
+  <!-- Slideshow HTML --><p></p>
+              	
+        <br>
+        <div class="blank_box">
+        	<a href="file:///F:/pet%20shop/index.html#"><img src="file:///F:/pet%20shop/images/rodape.jpg" alt=""></a>
+        </div>    
+    </div>
+    <div class="cleaner"></div>
+</div> <!-- END of main -->
+</div> <!-- END of main wrapper -->
+<div id="templatemo_footer_wrapper">
+<div id="templatemo_footer">
+  <div class="footer_right">
+		<p><a href="./index_files/index.htm">Home</a> | <a href="file:///F:/pet%20shop/products.html">Produtos</a> | <a href="file:///F:/pet%20shop/index.html#">Galeria</a> | <a href="file:///F:/pet%20shop/checkout.html">Cadastro</a> | <a href="file:///F:/pet%20shop/contact.html">Contatos</a> | <a href="file:///F:/pet%20shop/faqs.html">Dúvidas</a> | <a href="file:///F:/pet%20shop/about.html">Desenvolvedores</a></p>
+        <p><font color="#FFFF00">Trabalho:</font> ellenmenezespes@gmail.com , georgemasullo@gmail.com 
+          , paulooviiictor@gmail.com </p>
+	</div>
+    <div class="cleaner"></div>
+</div> <!-- END of footer -->
+</div> <!-- END of footer wrapper -->
+</div>
+
+
+
+<div id="lbOverlay" style="display: none;"></div><div id="lbCenter" style="display: none;"><div id="lbImage"><div style="position: relative;"><a id="lbPrevLink" href="file:///F:/pet%20shop/index.html#"></a><a id="lbNextLink" href="file:///F:/pet%20shop/index.html#"></a></div></div></div><div id="lbBottomContainer" style="display: none;"><div id="lbBottom"><a id="lbCloseLink" href="file:///F:/pet%20shop/index.html#"></a><div id="lbCaption"></div><div id="lbNumber"></div><div style="clear: both;"></div></div></div></body></html>
